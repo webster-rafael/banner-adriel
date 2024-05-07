@@ -175,6 +175,11 @@ body
     border-radius: 0.5rem;
 }
 
+.banner:first-child .banner-info > button:hover
+{
+    background-color: green;
+}
+
 .banner:first-child .banner-info > button > span 
 {
     font-size: 1rem;
@@ -246,6 +251,13 @@ body
     padding: 0.8rem 1rem;
     border-radius: 0.5rem;
 }
+
+.banner:first-child + .banner button:hover,
+.banner:last-child button:hover
+{
+    background-color: var(--color-zinc-700);
+}
+
 
 /* --------------- Responsividade ---------------- */
 
