@@ -1,0 +1,322 @@
+:root
+{
+    --color-zinc-100: #f4f4f5;
+    --color-zinc-950: #09090b;
+    --color-zinc-700: #3f3f46;
+    --color-sky-200: #bae6fd;
+    --color-amber-300: #fde68a;
+    --color-red-600: #dc2626;
+    --color-green-500: #16a34a;
+}
+
+* 
+{
+    box-sizing: border-box;
+}
+body
+{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+}
+
+.container 
+{
+    width: 100%;
+    height: 600px;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 20px;
+}
+
+.container .banner:first-child 
+{
+    width: 100%;
+    height: 100%;
+    grid-column: span 5; 
+    grid-row: span 6; 
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+.banner:first-child .banner-1,
+.banner:first-child .banner-2,
+.banner:first-child .banner-3
+{
+    width: 100%;
+    height: 38rem;
+    background: url(/assets/Chocozay-Wafer.webp);
+    background-size: cover;
+    background-position: calc(8.3rem);
+    padding: 10px 5rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.banner:first-child .banner-2
+{
+    width: 100%;
+    height: 38rem;
+    background: url(/assets/Chocozay-Wafer.webp);
+    background-size: cover;
+    background-position: calc(10rem);
+    padding: 10px 5rem;
+    border-radius: 1rem;
+}
+
+.banner:first-child .banner-3
+{
+    width: 100%;
+    height: 38rem;
+    background: url(/assets/Chocozay-Wafer.webp);
+    background-size: cover;
+    background-position: calc(10rem);
+    padding: 10px 5rem;
+    border-radius: 1rem;
+}
+
+.container .banner:first-child .banner-1 .promo,
+.container .banner:first-child .banner-2 .promo,
+.container .banner:first-child .banner-3 .promo
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: -2.5rem;
+    gap: 0.5rem;
+   
+}
+
+.banner:first-child .banner-1 .promo > p,
+.banner:first-child .banner-2 .promo > p,
+.banner:first-child .banner-3 .promo > p
+{
+    color: var(--color-zinc-950);
+    opacity: 90%;
+}
+
+.banner:first-child .banner-1 .promo > span,
+.banner:first-child .banner-2 .promo > span,
+.banner:first-child .banner-3 .promo > span
+{
+    background-color: var(--color-red-600);
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.5rem;
+    font: bolder;
+    color: var(--color-zinc-100);
+}
+
+.banner:first-child .banner-1 .banner-info,
+.banner:first-child .banner-2 .banner-info,
+.banner:first-child .banner-3 .banner-info
+{
+    width: 80%;
+}
+
+.banner:first-child + .banner .banner-info,
+.banner:last-child .banner-info
+{
+    width: 60%;
+    margin-top: 3rem;
+}
+
+.banner:first-child .banner-1 .banner-info > h1,
+.banner:first-child .banner-2 .banner-info > h1,
+.banner:first-child .banner-3 .banner-info > h1
+{
+    font-size: 2.57rem;
+    margin-bottom: -0.1rem;
+}
+
+.banner:first-child .banner-1 .banner-info > h3,
+.banner:first-child .banner-2 .banner-info > h3,
+.banner:first-child .banner-3 .banner-info > h3
+{
+    font-size: 1.1rem;
+    color: var(--color-zinc-950);
+    opacity: 90%;
+    margin-bottom: 2rem;
+    margin-bottom: -0.rem;
+}
+.banner:first-child .banner-info > h6
+{
+    font-size: 1rem;
+    font: medium;
+    color: var(--color-zinc-700);
+
+}
+
+.banner:first-child .banner-info > h6 > .price
+{
+    font-size: 1.4rem;
+    font: medium;
+    color: var(--color-red-600);
+}
+
+.banner:first-child .banner-info > button
+{
+    background-color: var(--color-green-500);
+    border-style: none;
+    padding: 0.8rem 2.5rem;
+    color: var(--color-zinc-100);
+    font-weight: bolder;
+    border-radius: 0.5rem;
+}
+
+.banner:first-child .banner-info > button > span 
+{
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+.container .banner:first-child + .banner
+{
+    background-color: var(--color-sky-200);
+    background-image: url(/assets/products.png);
+    background-position: calc(90%) bottom;
+    background-size: calc(40%);
+    background-repeat: no-repeat;
+}
+
+.container .banner:last-child 
+{
+    background-color: var(--color-amber-300);
+    background-image: url(/assets/frutas.png);
+    background-position: calc(96%) bottom;
+    background-size: calc(60%);
+    background-repeat: no-repeat;
+    
+}
+
+.container .banner:first-child + .banner,
+.container .banner:last-child 
+{
+    grid-column: span 4; 
+    grid-row: span 3;
+    border-radius: 1rem;
+}
+
+
+.banner:first-child + .banner,
+.banner:last-child
+{
+    padding: 10px 3rem;
+
+}
+
+.banner:first-child + .banner h1,
+.banner:last-child h1 
+{
+    font-size: 1.5rem;
+    font: 600;
+}
+
+.banner:first-child + .banner h3,
+.banner:last-child h3 
+{
+    font-size: 1rem;
+    color: var(--color-zinc-700);
+    font-weight: 600;
+}
+
+.banner:first-child + .banner span
+{
+    color: var(--color-zinc-950);
+    font-weight: 700;
+}
+
+.banner:first-child + .banner button,
+.banner:last-child button
+{
+    background-color: var(--color-zinc-950);
+    color: var(--color-zinc-100);
+    border-style: none;
+    padding: 0.8rem 1rem;
+    border-radius: 0.5rem;
+}
+
+/* --------------- Responsividade ---------------- */
+
+@media screen and (max-width: 768px) {
+    body 
+    {
+        overflow: visible;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        margin: 1rem 0;
+    }
+    .container 
+    {
+        height: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: 5px; 
+        margin: 1rem auto;
+        gap: 2rem;
+    }
+
+    .banner:first-child .banner-1,
+    .banner:first-child .banner-2,
+    .banner:first-child .banner-3
+    {
+        width: 100%;
+        height: 38rem;
+        background: url(/assets/Chocozay-Wafer.webp);
+        background-size: cover;
+        background-position: calc(8.3rem);
+        padding: 10px 5rem;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+    
+    }
+
+    .banner:first-child .banner-1 .banner-info,
+    .banner:first-child .banner-2 .banner-info,
+    .banner:first-child .banner-3 .banner-info
+    {
+        width: 100%;
+    }
+
+    .banner:first-child + .banner .banner-info,
+    .banner:last-child .banner-info
+    {
+        width: 100%;
+        margin-top: 3rem;
+    }
+
+    .banner:first-child .banner-1 .banner-info > h1,
+    .banner:first-child .banner-2 .banner-info > h1,
+    .banner:first-child .banner-3 .banner-info > h1
+    {
+        font-size: 2rem;
+        margin-bottom: -0.1rem;
+    }
+
+    .banner:first-child .banner-1 .banner-info > button,
+    .banner:first-child .banner-2 .banner-info > button,
+    .banner:first-child .banner-3 .banner-info > button
+    {
+        font-size: 0.8rem;
+    }
+
+    .container .banner:first-child + .banner,
+    .container .banner:last-child
+    {
+        margin: 1rem;
+        width: 100%;    
+    }
+    }
